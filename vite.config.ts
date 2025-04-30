@@ -2,17 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react()], // Только react-плагин для Vite
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
-  },
-  css: {
-    postcss: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
-    },
   },
   define: {
     'process.env': {},
